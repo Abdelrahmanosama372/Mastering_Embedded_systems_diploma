@@ -1,1 +1,0 @@
-Embedded diploma by eng/keroles
