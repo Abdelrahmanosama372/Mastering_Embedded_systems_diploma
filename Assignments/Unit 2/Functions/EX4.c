@@ -30,6 +30,6 @@ int main(void)
 
 int power(int base_num , int power_num)
 {
-	if (power_num == 1) return base_num;
-	else return ( base_num * power(base_num , power_num-1) );
+	if (power_num != 0) return ( base_num * power(base_num , power_num-1) );
+	else return 1;
 }
