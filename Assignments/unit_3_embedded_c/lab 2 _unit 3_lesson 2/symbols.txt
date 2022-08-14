@@ -1,0 +1,24 @@
+// symbols for app.o
+00000000 T main
+00000000 D string_buffer
+         U uart_send_string
+
+
+// symbols for startup.o
+         U main
+00000000 T reset
+         U stack_top
+00000008 t stop
+
+
+// symbols for uart.o
+00000000 T uart_send_string
+
+
+// symbols for elf file
+00010060 T main
+00010000 T reset
+000110dc D stack_top
+00010008 t stop
+00010078 D string_buffer
+00010010 T uart_send_string
