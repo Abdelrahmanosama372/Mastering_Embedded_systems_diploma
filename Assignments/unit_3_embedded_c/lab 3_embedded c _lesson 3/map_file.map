@@ -1,0 +1,116 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+flash            0x08000000         0x00020000         xr
+Sram             0x20000000         0x00005000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x08000000      0x1f4
+ *(.vectors)
+ .vectors       0x08000000       0x1c startup.o
+                0x08000000                vectors
+ *(.text)
+ .text          0x0800001c      0x104 startup.o
+                0x0800001c                reset_Handler
+                0x08000110                Default_Handler
+                0x08000110                MM_Handler
+                0x08000110                Usage_Fault_Handler
+                0x08000110                H_Handler
+                0x08000110                Bus_Handler
+                0x08000110                NMI_Handler
+ .text          0x08000120       0xd4 led_toggling.o
+                0x08000120                main
+ *(.rodata)
+                0x080001f4                . = ALIGN (0x4)
+                0x080001f4                _E_text = .
+
+.glue_7         0x080001f4        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x080001f4        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x080001f4        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x080001f4        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x080001f4        0x0
+ .iplt          0x00000000        0x0 startup.o
+
+.rel.dyn        0x080001f4        0x0
+ .rel.iplt      0x00000000        0x0 startup.o
+
+.data           0x20000000        0x0 load address 0x080001f4
+                0x20000000                _S_data = .
+ *(.data)
+ .data          0x20000000        0x0 startup.o
+ .data          0x20000000        0x0 led_toggling.o
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _E_data = .
+
+.igot.plt       0x20000000        0x0 load address 0x080001f4
+ .igot.plt      0x00000000        0x0 startup.o
+
+.bss            0x20000000     0x1000 load address 0x080001f4
+                0x20000000                _S_bss = .
+ *(.bss)
+ .bss           0x20000000        0x0 startup.o
+ .bss           0x20000000        0x0 led_toggling.o
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _E_bss = .
+                0x20001000                . = (. + 0x1000)
+ *fill*         0x20000000     0x1000 
+                0x20001000                _stack_top = .
+LOAD startup.o
+LOAD led_toggling.o
+OUTPUT(led_toggling.elf elf32-littlearm)
+
+.debug_info     0x00000000      0x215
+ .debug_info    0x00000000      0x177 startup.o
+ .debug_info    0x00000177       0x9e led_toggling.o
+
+.debug_abbrev   0x00000000      0x138
+ .debug_abbrev  0x00000000       0xd8 startup.o
+ .debug_abbrev  0x000000d8       0x60 led_toggling.o
+
+.debug_loc      0x00000000       0x84
+ .debug_loc     0x00000000       0x58 startup.o
+ .debug_loc     0x00000058       0x2c led_toggling.o
+
+.debug_aranges  0x00000000       0x40
+ .debug_aranges
+                0x00000000       0x20 startup.o
+ .debug_aranges
+                0x00000020       0x20 led_toggling.o
+
+.debug_line     0x00000000      0x150
+ .debug_line    0x00000000       0xad startup.o
+ .debug_line    0x000000ad       0xa3 led_toggling.o
+
+.debug_str      0x00000000      0x15c
+ .debug_str     0x00000000      0x14d startup.o
+                                0x181 (size before relaxing)
+ .debug_str     0x0000014d        0xf led_toggling.o
+                                0x103 (size before relaxing)
+
+.comment        0x00000000       0x11
+ .comment       0x00000000       0x11 startup.o
+                                 0x12 (size before relaxing)
+ .comment       0x00000000       0x12 led_toggling.o
+
+.ARM.attributes
+                0x00000000       0x32
+ .ARM.attributes
+                0x00000000       0x32 startup.o
+ .ARM.attributes
+                0x00000032       0x32 led_toggling.o
+
+.debug_frame    0x00000000       0x70
+ .debug_frame   0x00000000       0x48 startup.o
+ .debug_frame   0x00000048       0x28 led_toggling.o
