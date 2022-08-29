@@ -1,0 +1,39 @@
+startup.o symbols
+------------------
+         U _E_bss
+         U _E_data
+         U _E_text
+         U _S_bss
+         U _S_data
+000000b0 W Bus_Handler
+000000b0 T Default_Handler
+000000b0 W H_Handler
+         U main
+000000b0 W MM_Handler
+000000b0 W NMI_Handler
+00000000 T reset_Handler
+00000000 b stack_top
+000000b0 W Usage_Fault_Handler
+00000000 R vectors
+
+led_toggling_Tiva_c.o symbols
+-------------------------
+00000000 T main
+
+led_toggling.elf symbols
+-------------------------
+20000400 B _E_bss
+20000000 T _E_data
+000001a0 T _E_text
+20000000 B _S_bss
+20000000 T _S_data
+000000cc W Bus_Handler
+000000cc T Default_Handler
+000000cc W H_Handler
+000000d8 T main
+000000cc W MM_Handler
+000000cc W NMI_Handler
+0000001c T reset_Handler
+20000000 b stack_top
+000000cc W Usage_Fault_Handler
+00000000 T vectors
