@@ -1,0 +1,39 @@
+startup.o symbols
+------------------
+         U _E_bss
+         U _E_data
+         U _E_text
+         U _S_bss
+         U _S_data
+         U _stack_top
+000000f4 W Bus_Handler
+000000f4 T Default_Handler
+000000f4 W H_Handler
+         U main
+000000f4 W MM_Handler
+000000f4 W NMI_Handler
+00000000 T reset_Handler
+000000f4 W Usage_Fault_Handler
+00000000 D vectors
+
+led_toggling.o symbols
+-------------------------
+00000000 T main
+
+led_toggling.elf symbols
+-------------------------
+20000000 B _E_bss
+20000000 T _E_data
+080001f4 T _E_text
+20000000 B _S_bss
+20000000 T _S_data
+20001000 B _stack_top
+08000110 W Bus_Handler
+08000110 T Default_Handler
+08000110 W H_Handler
+08000120 T main
+08000110 W MM_Handler
+08000110 W NMI_Handler
+0800001c T reset_Handler
+08000110 W Usage_Fault_Handler
+08000000 T vectors
