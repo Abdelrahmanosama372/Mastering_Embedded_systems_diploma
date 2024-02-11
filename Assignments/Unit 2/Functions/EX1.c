@@ -1,10 +1,8 @@
 /*
  ============================================================================
  Name        : EX1.c
- Author      : 
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Author      : Abdelrahman osama
+ Description : print prime numbers between two intervals
  ============================================================================
  */
 

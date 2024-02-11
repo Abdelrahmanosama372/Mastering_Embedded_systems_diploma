@@ -1,10 +1,8 @@
 /*
  ============================================================================
  Name        : EX2.c
- Author      : 
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Author      : Abdelrahman osama
+ Description : Calculate factorial of a number using recursion
  ============================================================================
  */
 
@@ -19,13 +17,12 @@ int main(void)
 	printf("Enter a positive integer: ");
 	fflush(stdout);
 	scanf("%d",&num);
-	printf("Factorial of %d = %d",num,factorial(num));
+	printf("Factorial of %d = %d\n",num,factorial(num));
 }
 
 int factorial (int x)
 {
-	if ( x == 1) return 1;
-	x = x * factorial(x-1);
-	return x;
-
+	if ( x == 1) 
+		return 1;
+	return x * factorial(x-1);
 }
