@@ -1,6 +1,6 @@
-# LCD Data writing using Keypad with ATmega32
+# LCD Data display with ATmega32
 
-This project demonstrates how to write data on an LCD (Liquid Crystal Display) using Keypad.
+This project demonstrates how to display data on an LCD (Liquid Crystal Display).
 
 ## Setup Instructions
 
@@ -10,7 +10,7 @@ This project demonstrates how to write data on an LCD (Liquid Crystal Display) u
 ## How to Use
 
 1. Power on the simulation of Amit kit in proteus.
-2. The LCD will display the data written by Keypad.
+2. The LCD will display the data.
 
 ## Circuit Diagram
 
