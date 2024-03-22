@@ -1,0 +1,12 @@
+../HAL/lcd.c:17:6:LCD_init	8	static
+../HAL/lcd.c:28:6:LCD_lcd_kick	8	static
+../HAL/lcd.c:34:6:LCD_writeCommand	16	static
+../HAL/lcd.c:54:6:LCD_writeChar	16	static
+../HAL/lcd.c:78:6:LCD_writeString	16	static
+../HAL/lcd.c:85:6:LCD_writeInteger	24	static
+../HAL/lcd.c:91:6:LCD_writeFloat	24	static
+../HAL/lcd.c:101:6:LCD_clearDisplay	8	static
+../HAL/lcd.c:107:6:LCD_backClearDisplay	16	static
+../HAL/lcd.c:122:6:LCD_goTo_X_and_Y	16	static
+../HAL/lcd.c:139:6:Lcd_gpio_init	16	static
+../HAL/lcd.c:166:6:delay	16	static
