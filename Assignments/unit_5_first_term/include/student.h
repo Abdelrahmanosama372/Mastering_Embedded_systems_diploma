@@ -1,3 +1,7 @@
+
+#ifndef STUDENT_H_
+#define STUDENT_H_
+
 #include <stdio.h>
 #include <string.h>
 
@@ -11,6 +15,7 @@ typedef struct
     unsigned int payroll;
     float GPA;
     unsigned int coursesId[COURSES_MAX_NUM];
+    unsigned int courses_number;
 }Student_t;
 
 typedef enum {
@@ -19,13 +24,16 @@ typedef enum {
     PAYROLL_SET_FAILURE,
     GPA_SET_FAILURE,
     COURSES_ID_SET_FAILURE,
-    SUCCESS
+    SUCCESSFULL_SET
 }Status_t;
 
 // -------------------- APIs --------------------
 Status_t set_studentData(Student_t* student, char *firstName, char *lastName, unsigned int payroll, float GPA, unsigned int *coursesId, unsigned int courses_number);
 Status_t set_firstName(Student_t* student, char *name);
-Status_t set_LastName(Student_t* student, char *name);
+Status_t set_lastName(Student_t* student, char *name);
 Status_t set_payRoll(Student_t* student, unsigned int payroll);
 Status_t set_GPA(Student_t* student, float GPA);
 Status_t set_coursesID(Student_t* student, unsigned int *ids, unsigned int courses_number);
+void display_student(Student_t* student);
+
+#endif /* STUDENT_H_ */
