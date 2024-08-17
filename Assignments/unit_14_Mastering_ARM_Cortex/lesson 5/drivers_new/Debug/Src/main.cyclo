@@ -1,0 +1,6 @@
+../Src/main.c:66:5:taskA	1
+../Src/main.c:71:5:taskB	1
+../Src/main.c:81:6:SVC_Handler	1
+../Src/main.c:86:5:main	1
+../Src/main.c:117:6:ledtoggling	2
+../Src/main.c:128:6:OS_start	2
