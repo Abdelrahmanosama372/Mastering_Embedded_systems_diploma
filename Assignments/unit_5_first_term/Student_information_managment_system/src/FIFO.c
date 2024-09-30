@@ -31,7 +31,7 @@ FIFO_Status_t add_student(FIFO_t *fifo,char *firstName, char *lastName, unsigned
     fifo->count++;
 }
 
-FIFO_Status_t find_student(FIFO_t *fifo, Student_t **student,FIFO_Status_t (*search)(Student_t *, void *), void *searchData, Student_t *start_from_student){
+FIFO_Status_t find_student(FIFO_t *fifo, Student_t **student,FIFO_Status_t (*lambda)(Student_t *, void *), void *searchData, Student_t *start_from_student){
 
     Student_t *student_ptr;
     if(start_from_student == NULL){
