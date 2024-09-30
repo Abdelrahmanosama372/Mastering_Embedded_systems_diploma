@@ -2,7 +2,7 @@
 #include "../include/systemManager.h"
 
 
-#define FILEPATH "/home/abdelrahman/E/github-repos/Mastering_Embedded_systems_diploma/Assignments/unit_5_first_term/src/data"
+#define FILEPATH "data"
 
 int main() {
 
