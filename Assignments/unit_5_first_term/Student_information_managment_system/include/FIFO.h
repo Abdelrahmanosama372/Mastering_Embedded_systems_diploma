@@ -4,7 +4,7 @@
 
 #include "student.h"
 
-#define FIFO_SIZE 5
+#define FIFO_SIZE 10
 
 /**
  * @brief Structure representing a First-In-First-Out (FIFO) queue of students.
