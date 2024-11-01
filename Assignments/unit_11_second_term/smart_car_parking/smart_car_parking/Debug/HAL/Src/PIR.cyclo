@@ -1,0 +1,2 @@
+../HAL/Src/PIR.c:10:6:PIR_init	1
+../HAL/Src/PIR.c:18:9:PIR_is_Car_Detected	1

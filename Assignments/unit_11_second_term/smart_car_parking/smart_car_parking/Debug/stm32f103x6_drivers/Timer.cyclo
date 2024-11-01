@@ -1,0 +1,3 @@
+../stm32f103x6_drivers/Timer.c:12:6:Timer2_init	2
+../stm32f103x6_drivers/Timer.c:21:6:dus	2
+../stm32f103x6_drivers/Timer.c:27:6:dms	2

@@ -1,0 +1,4 @@
+../HAL/Src/Servo_Motor.c:12:6:Servo1_Entry_Gate_Init	1
+../HAL/Src/Servo_Motor.c:23:6:Servo1_Entry_Gate	3
+../HAL/Src/Servo_Motor.c:44:6:Servo2_Exit_Gate_Init	1
+../HAL/Src/Servo_Motor.c:55:6:Servo2_Exit_Gate	3
